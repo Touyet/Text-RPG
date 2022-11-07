@@ -1,0 +1,19 @@
+{
+    "extends": "@tsconfig/node16/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "dist",
+        "lib": [
+            "dom",
+            "ES2015"
+        ],
+        "target": "ES6",
+        "strictNullChecks": false,
+        "suppressImplicitAnyIndexErrors": true,
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

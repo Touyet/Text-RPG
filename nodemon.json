@@ -1,0 +1,12 @@
+{
+    "watch": [
+        "dist/**/*.js",
+        "src/**/*.ejs",
+        "src/**/*.css"
+    ],
+    "ignore": [
+        "bundled/*"
+    ],
+    "ext": "js,ejs,css",
+    "exec": "npm run copy && npm run bundle && node dist/server/server.js"
+}
