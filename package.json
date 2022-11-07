@@ -7,7 +7,7 @@
     "bundle": "node bundler.js",
     "exorcist": "exorcist dist/commons/utils.js.map > dist/client/bundled/drawingSpace.js",
     "copy": "copyfiles -u 1 src/**/*.ejs src/**/*.css dist/ ",
-    "build": "npm run copy && npx tsc",
+    "build": "npm run copy && npm run bundle && npx tsc",
     "auto_build": "npx tsc --watch",
     "start": "nodemon"
   },
