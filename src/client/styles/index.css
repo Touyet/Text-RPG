@@ -1,0 +1,44 @@
+/* See https://www.youtube.com/watch?v=2H602-zG62w for a tutorial on HTML Grid*/
+.grid {
+    display: grid;
+    width: 85vw;
+    height: calc(100vh - 75px);
+    margin: 10px auto;
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    grid-template-rows: 1fr 1fr;
+
+    column-gap: 5px;
+    row-gap: 5px;
+
+    grid-template-areas:
+        "character map quests"
+        "inventory map logs";
+}
+
+.grid-item {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+
+    padding: 5px;
+    display: flex;
+}
+
+.character-info {
+    grid-area: character;
+}
+
+.inventory {
+    grid-area: inventory;
+}
+
+.place-info {
+    grid-area: map;
+}
+
+.quest-list {
+    grid-area: quests;
+}
+
+.logs {
+    grid-area: logs;
+}
