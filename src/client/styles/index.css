@@ -7,8 +7,7 @@
     grid-template-columns: 1.5fr 7fr 1.5fr;
     grid-template-rows: 1fr 1fr;
 
-    column-gap: 5px;
-    row-gap: 5px;
+    gap: 5px;
 
     grid-template-areas:
         "character map quests"
