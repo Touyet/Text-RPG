@@ -1,4 +1,6 @@
+import * as ejs from "ejs";
 import express from "express";
+import * as fs from "fs";
 import path from "path";
 const app = express();
 const port = 3000;
@@ -14,7 +16,12 @@ app.get('/', (req, res) => {
 
 });
 app.get('/*', (req, res) => {
-    res.render("pages" + req.originalUrl, { script: [req.originalUrl], css: [req.originalUrl] });
+    let pagePathToSend = ejs.resolveInclude(path.join(__dirname, "../client", "pages" + req.originalUrl), "pages" + req.originalUrl);
+    if (fs.existsSync(pagePathToSend)) {
+        res.render("pages" + req.originalUrl, { script: [req.originalUrl], css: [req.originalUrl] });
+    } else {
+        res.redirect('/');
+    }
 });
 
 
